@@ -1,5 +1,6 @@
 
 public class WelcomeMessage {
+	private long count;
 	private String welcomeMsg;
 
 	public WelcomeMessage(){
@@ -12,5 +13,10 @@ public class WelcomeMessage {
 
     public void sayHello( String userName ) {
     	System.out.println(welcomeMsg + " " + userName);
+    	count++;
+    }
+
+    public long getCount() {
+    	return count;
     }
 }
