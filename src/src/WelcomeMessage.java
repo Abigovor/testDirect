@@ -1,22 +1,23 @@
 
 public class WelcomeMessage {
-	private long count;
-	private String welcomeMsg;
+	private Counter counter;
+	private String welcomeMsg = "Welcome";
 
 	public WelcomeMessage(){
-		this.welcomeMsg = "Welcome";
+		this.counter = new Counter();
 	}
 
 	public WelcomeMessage(String welcomMsg){
+		super();
 		this.welcomeMsg = welcomMsg;
 	}
 
     public void sayHello( String userName ) {
     	System.out.println(welcomeMsg + " " + userName);
-    	count++;
+    	this.counter.increment();
     }
 
     public long getCount() {
-    	return count;
+    	return this.counter.getCount();
     }
 }
